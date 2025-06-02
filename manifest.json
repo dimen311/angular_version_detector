@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Angular Version Detector",
+    "version": "1.0.0",
+    "homepage_url": "https://github.com/username/angular-detector",
+    "author": "dimen311",
+    "description": "Detects Angular framework and displays version information",
+    "permissions": [
+      "activeTab"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],    
+        "run_at": "document_end"
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["styles.css"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
