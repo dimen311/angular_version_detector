@@ -127,14 +127,14 @@
             shadowRoot.appendChild(link);
             shadowRoot.appendChild(container);
             document.body.appendChild(host);
+            window.isAngularDetectorActive = true;
         } catch (error) {
             console.warn('Angular Detector: Failed to create display', error);
         }
     }
 
     function init() {
-        const isAttached = document.getElementById('angular-version-detector');
-        if (isAttached) {
+        if (window.isAngularDetectorActive) {
             return;
         }
 
